@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import "./ContactUs.css";
 import emailjs from '@emailjs/browser';
 import{ init } from '@emailjs/browser';
@@ -10,12 +10,26 @@ AOS.init();
 const ContactUs = () => {
   const form = useRef();
 
+  const [data,setData] = useState(
+    {name:"", 
+    email:"",
+    message:""
+  }
+  )
+  const getState = (e) => {
+    setData ({...data,[e.target.name]:e.target.value})
+  } 
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_oly5l78', 'template_4uwxa6v', form.current, 'gSNpD8XBfkAQriDQ5')
       .then((result) => {
-          console.log(result.text);
+          alert("Message Sent")
+          setData( {name:"", 
+          email:"",
+          message:""
+        })
       }, (error) => {
           console.log(error.text);
       });
@@ -39,13 +53,13 @@ const ContactUs = () => {
       </div>
     <form className='container' ref={form} onSubmit={sendEmail}>
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <input type="text" name="name" value={data.name} onChange={getState} />
       <label>Email</label>
-      <input type="email" name="user_email" />
+      <input type="email" name="email" value={data.email} onChange={getState} />
       <label>Message</label>
-      <textarea className='message' name="message" />
+      <textarea className='message' name="message" value={data.message} onChange={getState} />
           <div className="profile-options">
-            <button className="btn primary-btn" type="submit" value="Send">
+            <button className="btn primary-btn" type="submit" value="submit">
               {""}
               Hier me{""}
             </button>

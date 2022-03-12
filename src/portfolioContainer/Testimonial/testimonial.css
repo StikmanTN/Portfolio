@@ -5,11 +5,6 @@
     align-items: center ;
     justify-content: center ;
 }
-.image{
-   width: 1080px ;
-   height: 720px ;
-   margin: 30px 0 30px 0;
-}
 .About-title{
     font-size: 32px;
     color: #1f2235;
@@ -44,4 +39,14 @@
     width: 35px;
     border-radius: 10px;
     background-color: var(--dark-orange);
+}
+.carosel{
+    width: 1000px !important;
+    height: 500px;
+    
+}
+.image{
+    width: 1080px;
+    height: 624px;
+    object-fit: contain !important;
 }

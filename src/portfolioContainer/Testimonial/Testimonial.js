@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Carousel from "react-elastic-carousel";
 import img1 from "../../assets/Testemonial/S1.jpg";
 import img2 from "../../assets/Testemonial/S2.jpg";
 import img3 from "../../assets/Testemonial/S3.jpg";
@@ -9,7 +8,9 @@ import img6 from "../../assets/Testemonial/S6.jpg";
 import img7 from "../../assets/Testemonial/S7.jpg";
 import img8 from "../../assets/Testemonial/S8.jpg";
 import img9 from "../../assets/Testemonial/S9.jpg";
+
 import "./testimonial.css";
+import {Carousel} from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
@@ -40,15 +41,17 @@ const Testimonial = () => {
           <div></div>
         </div>
       </div>
-    <div className="container-carosel">
-      <Carousel  className="" >
-        {items.map((item) => (
-          <div key={item.id}>
-            <img src={item.image} className="image" />
-          </div>
-        ))}
-      </Carousel>
-    </div>
+      <Carousel>
+  {items.map( e => (<Carousel.Item>
+    <img className="image"
+      src= {e.image}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      {/* caption if needed */}
+    </Carousel.Caption>
+  </Carousel.Item>))}
+</Carousel>
     </div>
   );
 };
