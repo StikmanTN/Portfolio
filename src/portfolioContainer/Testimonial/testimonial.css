@@ -46,6 +46,7 @@
     
 }
 .image{
+    margin-top: 30px;
     width: 1080px;
     height: 624px;
     object-fit: contain !important;

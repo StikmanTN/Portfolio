@@ -61,7 +61,7 @@ const ContactUs = () => {
           <div className="profile-options">
             <button className="btn primary-btn" type="submit" value="submit">
               {""}
-              Hier me{""}
+              Hire me{""}
             </button>
             {/* button utiliser pour telecharger un resumee , un cv ou document */}
               {/* <a href="https://www.flickr.com/photos/samzek">

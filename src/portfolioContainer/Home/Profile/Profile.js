@@ -64,7 +64,7 @@ const Profile = () => {
           <Link className="link" to="Contact" smooth={true} duration ={3000}>
             <button className="btn primary-btn">
               {""}
-              Hier me{""}
+              Hire me{""}
             </button>
             </Link>
             {/* button utiliser pour telecharger un resumee , un cv ou document */}

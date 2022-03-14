@@ -99,7 +99,7 @@ export default function About() {
             <Link className="link" to="Contact" smooth={true} duration ={2000}>
               <button className="btn primary-btn">
                 {""}
-                Hier me{""}
+                Hire me{""}
               </button>
               </Link>
               {/* button utiliser pour telecharger un resumee , un cv ou document */}
