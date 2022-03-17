@@ -3,7 +3,7 @@ import Home from "./portfolioContainer/Home/Home";
 import About from "./portfolioContainer/AboutMe/About";
 import Home1 from "./portfolioContainer/Testimonial/Home1";
 import  ContactUs from "./portfolioContainer/ContactMe/ContactUs";
-import { ScrollToTop } from "./ScrollTop/scroll/ScrollToTop";
+import ScrollToTop from "./ScrollTop/ScrollToTop";
 
 
 function App() {
